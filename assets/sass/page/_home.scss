@@ -605,6 +605,10 @@
 		&:nth-child(3) {
 			flex-grow: 0;
 			max-width: 26rem;
+			input[type="submit"] {
+				padding-left: 4rem;
+				padding-right: 4rem;
+			}
 			@include bp($point_4) {
 				max-width: 100%;
 			}
@@ -624,7 +628,7 @@
 .reviews_main {
 
 	.btn {
-		max-width: 28.9rem;
+		display: inline-flex;
 	}
 }
 .reviews_head {

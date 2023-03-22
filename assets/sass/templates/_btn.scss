@@ -39,6 +39,7 @@
 		button, a, input[type='submit'] {
 			@include app;
 			color: $white;
+			font-size: 2rem;
 		}
 		&:before {
 			background: $double;

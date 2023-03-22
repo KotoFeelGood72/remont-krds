@@ -127,7 +127,7 @@ block content_block
 					.swiper-wrapper
 						-for(i = 0; i < 12; i++)
 							.swiper-slide 
-								a(href="i/work.jpg")
+								a(href="i/work.jpg" data-fancybox) 
 									img(src="i/work.jpg", alt="")
 	section.step.p100 
 		.section_in 
@@ -148,7 +148,7 @@ block content_block
 			.action_main 
 				.action_head.mb8 
 					h6 Заголовок для акции
-					p.custom-desk Почему мы Вам понравимся? Мы работаем в белую. Все скидки наших поставщиков - ваши!\
+					p.custom-desk Почему мы Вам понравимся? Мы работаем в белую. Все скидки наших поставщиков - ваши!
 				.action_form
 					div
 						+input({
@@ -174,7 +174,7 @@ block content_block
 						a(href="#")
 							p Больше отзывов смотрите
 							.reviews_more--icon 
-								img(src="i/social/vk.svg", alt="")
+								img(src="i/social/vk.png", alt="")
 				ul.reviews_list.mb8 
 					-for(i = 0; i < 2; i++)
 						- let revName = ['Татьяна', 'Михаил']
