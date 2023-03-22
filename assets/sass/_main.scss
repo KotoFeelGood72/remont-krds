@@ -1,0 +1,117 @@
+img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+}
+
+h1 {
+	font-size: 5.5rem;
+	font-family: $font_2;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 4rem;
+	}
+	@include bp($point_5) {
+		font-size: 2.4rem;
+		font-family: $font_4;
+	}
+}
+
+
+h2, h3, h4, h5, h6 {
+	font-size: 4.5rem;
+	font-family: $font_2;
+	color: $dark;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 3rem;
+	}
+	@include bp($point_5) {
+		font-size: 2.4rem;
+	}
+}
+
+.global_txt {
+	ul, p, span {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.upScroll {
+	position: fixed;
+	bottom: 4rem;
+	right: 4rem;
+	z-index: 100;
+	width: 6rem;
+	height: 6rem;
+	transform: rotate(-90deg);
+	filter: invert(1);
+	mix-blend-mode: difference;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	@include bp($point_5) {
+		display: none;
+	}
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:hover {
+		.icon-arrow_scroll {
+			&:nth-child(1) {
+				left: 100%
+			}
+			&:nth-child(2) {
+				left: 0
+			}
+		}
+	}
+
+	.icon-arrow_scroll {
+		@include flex-center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all .4s ease;
+		&:nth-child(1) {
+			width: 6rem;
+			height: 6rem;
+		}
+		&:nth-child(2) {
+			width: 6rem;
+			height: 6rem;
+			left: -100%;
+			top: auto;
+		}
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $double;
+		// opacity: .5;
+		content: '';
+		pointer-events: none;
+		@include z-index(el);
+	}
+	a {
+		color: $white;
+		width: 100%;
+		height: 100%;
+		@include flex-center;
+		transition: all .3s ease;
+		
+	}
+}
+
+

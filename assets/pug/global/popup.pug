@@ -1,0 +1,40 @@
+.popup.popup_form(data-id="form")
+	.popup_bg.remove 
+	.popup_main.popup_form_main 
+		.remove.popup_close 
+			+icon('close')
+		.popup_form_head 
+			h3 Оставьте заявку
+			p Наши менеджеры свяжутся с вами в ближайшее время
+		.popup_form--action 
+			+input({
+				place: 'Ваше имя',
+			})
+			+input({
+				place: 'Ваш телефон',
+				type: 'tel',
+			})
+			.popup_form_bottom 
+				+btn({
+					color: 'vio',
+					type: 'submit',
+				})
+				.form_notice!='Отправляя форму, вы соглашаетесь с <a href="/" target="_blank">политикой конфиденциальности.</a>'
+
+.popup.burger(data-id="burger")
+	.popup_bg.remove 
+	.burger_main.popup_main
+		.remove.popup_close 
+			+icon('close')
+		nav.burger_nav 
+			ul 
+				each item in ['Услуги', 'Преимущества', 'Этапы работы', 'Отзывы', 'FAQ', 'Статьи', 'Контакты']
+					li 
+						a(href="#" class="remove" )=item
+		.burger_phone
+			a(href="#") +7 000 000-00-00
+		ul.social_list 
+			each item in ['wa', 'tg', 'vk']
+				li 
+					a(href="#")
+						img(src=`i/social/${item}.png`, alt=item)

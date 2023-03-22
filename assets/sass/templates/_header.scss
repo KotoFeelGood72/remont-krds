@@ -1,0 +1,108 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: $header;
+	width: 100%;
+	will-change: transform;
+	@include z-index(header);
+	font-size: 2rem;
+	@include bp($point_5) {
+		height: $header_mob;
+	}
+}
+
+.header {
+}
+.section_in {
+}
+.header_main {
+	@include flex-space;
+	padding: 1rem 0 1.5rem 0;
+	border-bottom: .1rem solid rgba(35, 35, 35, 0.1);
+	@include bp($point_5) {
+		border: none;
+		padding: 1rem 0;
+	}
+}
+.header_logo {
+	margin-right: 6rem;
+	max-width: 7.2rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	@include bp($point_5)  {
+		max-width: 6rem;
+		margin: 0;
+	}
+}
+.header_nav {
+	margin-right: 6rem;
+	@include bp($point_2) {
+		display: none;
+	}
+	ul {
+		@include flex-start;
+		li {
+			a {
+				@include link-accent;
+			}
+			&:not(:last-child) {
+				margin-right: 6rem;
+			}
+		}
+	}
+}
+.header_phone {
+	@include bp($point_2) {
+		@include flex-end;
+		flex-grow: 1;
+		margin-right: 4rem;
+	}
+	@include bp($point_5) {
+		display: none;
+	}
+	a {
+		color: $light-vio;
+		font-family: $font_2;
+		@include bp($point_2) {
+			font-size: 2.6rem;
+		}
+	}
+}
+
+.burger_trigger {
+	display: none;
+	position: relative;
+	@include bp($point_2) {
+		@include flex-center;
+		width: 7rem;
+		height: 5rem;
+	}
+	@include bp($point_5) {
+		max-width: 5rem;
+		max-height: 3.5rem;
+	}
+
+	span {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		border-bottom: .9rem solid $light-vio;
+		border-radius: .5rem;
+		@include bp($point_5) {
+			border-width: .6rem;
+		}
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			max-width: 80%;
+		}
+		&:nth-child(3) {
+			bottom: 0;
+			max-width: 60%;
+		}
+	}
+}

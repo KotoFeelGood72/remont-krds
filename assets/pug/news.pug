@@ -1,0 +1,30 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'NEWS'}
+block content_block
+	section.heroNews(style="background-image: url('../../i/hero.jpg')")
+		.section_in 
+			.heroNews_main 
+				h1 Наши статьи
+	section.news.p100 
+		.section_in 
+			ul.mb100.news_list
+				-for(i = 0; i < 5; i++)
+					li.news_item 
+						.news_item--img 
+							a(href="#")
+								img(src="i/news.jpg", alt="")
+						.news_item--content 
+							h3.fz35 Название статьи
+							span 20.20.2022
+							.news_item--txt!='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...'
+							+btn({
+								color: 'vio',
+								type: 'link',
+								name: 'Подробнее'
+							})
+			+pagination({
+				pages:5,
+				arrows:true
+			})

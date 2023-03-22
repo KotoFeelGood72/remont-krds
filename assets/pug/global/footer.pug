@@ -1,0 +1,33 @@
+footer.footer.mt100
+	.section_in 
+		.footer_main 
+			h6.mb8 Контакты
+			.footer_body 
+				ul.footer_info
+					-for(i = 0; i < 2; i++)
+						- let label = ['Телефон', 'Почта']
+						- let val = ['+7 000 000-00-00', 'pochtanazvaniye@yandex.ru']
+								li 
+									span=label[i]
+									a(href="#" class="fz23")=val[i]
+				.footer_social 
+					span Мессенджеры
+					ul 
+						each item in ['wa', 'tg', 'vk']
+							li 
+								a(href="#")
+									img(src=`i/social/${item}.png`, alt=item)
+				+btn({
+					color: 'vio',
+					name: 'Оставить заявку',
+					type: 'button',
+					target: 'form',
+				})
+			.footer_bottom 
+				ul
+					each item, i in ['© 2023 Все права защищены', 'Политика конфиденциальности']
+						if i > 0
+							li 
+								a(href="#")=item 
+						else 
+							li=item

@@ -1,0 +1,67 @@
+// Btn
+
+mixin btn(data)
+	.btn(class=data.class  class=`${data.color}-btn`)
+		if data.type === 'link'
+			a(href="#")=data.name
+		else if data.type === 'button'
+			button(type=data.type data-target=data.target class="trigger")=data.name
+		else if data.type === 'submit'
+			input(type="submit" value=data.name)
+
+// End btn
+
+// Input 
+
+mixin input(data)
+	.global_input(class=data.class ? data.class : data.class="form_input")
+			input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
+// end input
+
+// txt block
+
+mixin txt(data)
+	.txt-block(class=data.class) 
+		.txt_head!=data.title
+		.txt_boby!=data.txt
+
+// end txt block
+
+// service card
+
+mixin serviceCard(data)
+	.serviceCard 
+		a(href="#")
+			.serviceCard_icon 
+				+icon(data.icon)
+			.serviceCard_content 
+				h3=data.title 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			.serviceCard_link 
+				a(href="#")
+					p Подробнее
+					.serviceCard_link_icon 
+						+icon('arrow-right')
+
+
+// end service card
+
+// mixin section_head 
+
+mixin section_head(data)
+	.section_head 
+		.section_title!=data.title 
+		.section_nav(class=`${data.class}_nav`)
+			.section_nav_btn(class=`${data.class}_btn_next`)
+				+icon('arrow-right')
+			.section_nav_btn(class=`${data.class}_btn_prev`)
+				+icon('arrow-right')
+
+
+// end section_head
+
+// Work slider
+
+
+
+// end work slider

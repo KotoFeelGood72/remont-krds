@@ -1,0 +1,28 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'SINGLE-NEWS'}
+block content_block
+	section.singleNews 
+		.section_in 
+			.singleNews_main 
+				.singleNews_img 
+					img(src="i/single-news.jpg", alt="")
+				.singleNews_content 
+					h1.fz35 Название статьи
+					span 20.20.2022
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+	section.global-content 
+		.section_in 
+			.global_block--txt 
+				h2 Подзаголовок 1 (блок текст)
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+			.global_block--txtGallery 
+				h2 Подзаголовок 2 (блок текст + фото)
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				ul.gallery_list--img.grid-3 
+					-for(i = 0; i < 2; i++)
+						li 
+							a(href="i/news.jpg" data-fancybox)
+								img(src="i/news.jpg", alt="") 
