@@ -193,7 +193,7 @@
 		transition: all .3s ease;
 	}
 
-	&:hover, &.current-page-item, &.current-item {
+	&:hover, &.current-page-item, &.current-menu-item {
 		color: $vio;
 		&:before {
 			width: 100%;

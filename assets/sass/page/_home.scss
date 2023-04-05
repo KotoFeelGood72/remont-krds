@@ -482,6 +482,8 @@
 	.swiper-slide {
 		opacity: .5;
 		transition: all .3s ease;
+		overflow: hidden;
+		border-radius: $gl_radius;
 		&-active {
 			opacity: 1;
 		}
